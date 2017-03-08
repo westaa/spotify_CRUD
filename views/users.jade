@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  h3
+    a(href="/admin/loginsuccess/#{greeting}") Home
+  h2 Users
+
+  p
+    table
+      tr
+        th Username
+        th Password
+        th First Name
+        th Last Name
+        th Administrator
+        th Edit User
+        th Delete User
+      each user in users
+        tr
+          td= user.user_name
+          td ********
+          td= user.first_name
+          td= user.last_name
+          td= user.is_admin
+          td
+            a(href="/admin/#{user.id}/edit") Edit
+          td
+            a(href="/admin/#{user.id}/delete") Delete

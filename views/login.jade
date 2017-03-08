@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h5
+    a(href="/") Home
+  br
+  form(action="/index/users/login" method="post")
+    input(type="text" name="user_name" placeholder="username")
+    input(type="text" name="password" placeholder="password")
+    input(type="submit" value="Log In")
+  

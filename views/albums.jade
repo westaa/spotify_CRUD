@@ -1,0 +1,36 @@
+extends layout
+
+block content
+  
+  h5
+    a(href="/admin/loginsuccess/#{greeting}") Home
+  h5
+    a(href="/admin/albums/new/#{greeting}") Add Album
+  h5
+    a(href="/admin/api/spotify") Search Spotify
+  h4(class="header") Albums
+
+  p
+    table
+      tr(class="albumdata2")
+        th Artist
+        th Title
+        th Year
+        th Genre
+        th(width="80px") Image
+        th Rating
+        th
+        th
+      each album in albums
+        tr(class="albumData2")
+          td= album.artist
+          td= album.title
+          td= album.year
+          td= album.genre
+          td
+            img(src="#{album.image_url}" height="80px" width="80px" id="albumImage")
+          td(id="rating")= album.rating
+          td
+            a(href="/admin/albums/#{album.album_id}/edit") Edit
+          td
+            a(href="/admin/albums/delete/#{album.album_id}") Delete

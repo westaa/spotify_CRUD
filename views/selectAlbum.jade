@@ -1,0 +1,37 @@
+extends layout
+
+block content
+
+  h1 Selected Album
+  
+  form(action='/selectAlbum/add' method="Post")
+    table
+      tr
+        th Artist
+        th Album Name
+        th Rating
+        th Release Date
+        th Genre
+        th Image
+        th Image Url
+        th Tracks
+        th Add to database
+      tr(id='selectAlbum')
+        td
+          input(value='#{data[0]}'   name="artist" type="text")
+        td
+          input(type="text" value='#{data[1]}' name="title")
+        td
+          input(value='#{data[2]}' name="rating" type="number")
+        td
+          input(type='text' value='#{data[3]}' name='year')
+        td
+          input(type="text" name="genre" placeholder="genre")
+        td
+          img(src="#{data[4]}" alt="Image Not Found" height="80px" wdith="80px")
+        td
+          input(type="text" name="image_url" value="#{data[4]}")
+        td(class="trackList")
+          h6= songData
+        td
+          input(type="submit" value="Add Album")

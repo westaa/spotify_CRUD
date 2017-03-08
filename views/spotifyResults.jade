@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  
+  table
+    tr(class="albumData")
+      th Artist
+      th Album name
+      th Image
+      th Select Album
+    each item in data
+      tr(class="albumData")
+        td= item[2]
+        td= item[0]
+        td
+          img(src="#{item[1]}", alt="Image Not Found" height="100px" width="100px")
+        td
+          a(href="/selectAlbum/#{item[3]}") Select Album
+        

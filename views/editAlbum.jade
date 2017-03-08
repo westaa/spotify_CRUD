@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  h4
+    a(href="/admin/loginsuccess/#{greeting}") Home
+  h4(class='header') Edit Album
+  form(action="/admin/albums/#{album.id}/edit" method="post")
+    label(for="editArtist") Artist
+    input(type="text" value=album.artist name="artist" id='editArtist')
+    label(for="editTitle") Title    
+    input(type="text" value=album.title name="title" id="editTitle")
+    label(for="editYear") Year
+    input(type="text" value=album.year name="year" id="editYear")
+    label(for="editGenre") Genre
+    input(type="text" value=album.genre name="genre" id="editGenre")
+    label(for="edit_image_url") Image URL
+    input(type="text" value=album.image_url name="image_url" id="edit_image_url")
+    label(for="editRating") Rating
+    input(type="text" value=album.rating name="rating" id="editRating")
+    input(type="submit" value="Update Album")

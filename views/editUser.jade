@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h3 Edit User
+  form(action="/admin/#{user1.id}/edit" method="post")
+    label(for="editUsername") User Name
+    input(type="text" value=user1.user_name name="user_name" id='editUsername')
+    label(for="editFirstname") First Name
+    input(type="text" value=user1.first_name name="first_name" id="editFirstname")
+    label(for="editLastName") Last Name
+    input(type="text" value=user1.last_name name="last_name" id="editLastName")
+    label(for="editPassword") Password
+    input(type="text" value=user1.password name="password" id="editPassword")
+    label(for="editAdministrator") Administrator (true or false)
+    input(type="text" value=user1.is_admin name="is_admin" id="editIsAdministrator")
+    input(type="submit" value="Update User")

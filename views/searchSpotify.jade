@@ -1,0 +1,17 @@
+extends layout
+
+block content
+
+  h6 Search by album title.
+  
+  form(action='/api/spotify/search' method="post")
+    input(type="text" id="titleQuery" placeholder="Title" name="titleSearch")
+    input(type="Submit" value="Search" id="submitSearch")
+    input(type="hidden" name="artistSearch")
+
+  h6 Search by name of artist.
+  
+  form(action='/api/spotify/search' method="post")
+    input(type="text" id="titleQuery" placeholder="Artist" name="artistSearch")
+    input(type="Submit" value="Search" id="submitSearch")
+    input(type="hidden" name="titleSearch")

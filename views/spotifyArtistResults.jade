@@ -1,0 +1,8 @@
+extends layout
+
+block content
+
+  h6 Select Artist to initiate Album Search
+  each item in data
+    h5
+      a(href="/albums/searchArtists/#{item[1]}") #{item[0]}

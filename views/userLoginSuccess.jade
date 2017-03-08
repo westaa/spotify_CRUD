@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h2 Welcome to your homepage, #{greeting}.      
+    a(href="/logout") Logout
+  h3 
+    a(href="/users/albums/#{greeting}") View albums
+  h3 
+    a(href="/users/albums/new/#{greeting}") Add album
+  h3
+    a(href="/users/api/spotify") Search Spotify

@@ -1,0 +1,109 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: lightgrey;
+}
+
+a {
+  color: #00B7FF;
+}
+
+form {
+  background: darkgrey;
+  border-style: solid;
+  border-width: thin;
+  border-color:black;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: .75em;
+  margin-bottom: 50px;
+}
+form input[type=submit] {
+  width: 300px;
+  border-radius: 10px;
+  background: green;
+  color: white;
+  text-align: center;
+  padding: 0px;
+  font-size:1.5em;
+  height:25px;
+  padding: 0px;
+}
+form input[type=text] {
+  font-size: 2em;
+}
+#h41 {
+  text-align: center;
+}
+h2{
+  text-align: center;
+}
+label {
+  color: purple;
+}
+tr {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  align-self: center;
+  text-align: center;
+}
+.trackList {
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+}
+.trackList h6 {
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  font-size: .7em;
+}
+.albumData {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.albumData td {
+  width: 20%;
+  text-align: center;
+}
+.albumData th {
+  width: 20%;
+  text-align: center;
+}
+.albumData td  {
+  text-align: center;
+}
+.albumData2 td {
+  width:12.5%;
+  text-align: center;
+}
+.albumData2 th {
+  width:12.5%;
+  text-align: center;
+}
+.albumData2 {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.header{
+  text-align: center;
+}
+label{
+  padding: 0;
+}
+#selectAlbum td input{
+  font-size: .8em;
+}
+#albumImage{
+  margin-left: 40px;
+  margin-right: 400px;
+}
+#rating{
+  padding-left: 120px;
+}

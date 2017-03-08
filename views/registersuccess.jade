@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  header
+    h4(id='h41') #{greeting}'s  Homepage
+  h6 Welcome to Andrew's albums,   #{greeting}!
+  h6 We are a non-denominational album database.
+  h6 
+    a(href="/users/albums/#{greeting}") View Albums
+  h6
+    a(href="/albums/logout") Logout
+  
